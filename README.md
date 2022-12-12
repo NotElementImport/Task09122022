@@ -1,7 +1,14 @@
 # Setup
 
+yii2-basic
 ```
-cd <name_repository>
+composer create-project --prefer-dist yiisoft/yii2-app-basic task09122022
+```
+
+clone repository files
+
+```
+cd task09122022
 
 docker-compose -f docker/docker-compose.yml up -d
 ```
