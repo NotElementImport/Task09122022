@@ -3,7 +3,7 @@ namespace app\commands;
  
 use Yii;
 use yii\console\Controller;
-use app\models\Users;
+use app\models\User;
  
 class RbacController extends Controller
 {
@@ -23,7 +23,7 @@ class RbacController extends Controller
 
         $AuthData->assign($RoleUser, 1);
 
-        $UserOne = new Users();
+        $UserOne = new User();
         $UserOne->username = "jonhdoe_1";
         $UserOne->email = "jonh1@email";
         $UserOne->setPassword("jonh_1");
@@ -36,7 +36,7 @@ class RbacController extends Controller
 
         $AuthData->assign($UserRole, $UserOne->getId());
 
-        $UserTwo = new Users();
+        $UserTwo = new User();
         $UserTwo->username = "jonhdoe_2";
         $UserTwo->email = "jonh2@email";
         $UserTwo->setPassword("jonh_2");
@@ -47,14 +47,14 @@ class RbacController extends Controller
 
         $AuthData->assign($UserRole, $UserTwo->getId());
 
-        $UserThree = new Users();
+        $UserThree = new User();
         $UserThree->username = "jonhdoe_3";
         $UserThree->email = "jonh3@email";
         $UserThree->setPassword("jonh_3");
         $UserThree->generateAuthKey();
         if(!$UserThree->save())
         {
-            
+
         }
 
         $AuthData->assign($UserRole, $UserThree->getId());
