@@ -22,3 +22,4 @@ yii rbac/init
 ```
 
 p.s - в RbacController делаю иницализацию пользователей 
+p.s2 - Если нужен phpmyadmin server = db;
