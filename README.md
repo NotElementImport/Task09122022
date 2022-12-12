@@ -20,3 +20,5 @@ yii migrate
 
 yii rbac/init
 ```
+
+p.s - в RbacController делаю иницализацию пользователей 
